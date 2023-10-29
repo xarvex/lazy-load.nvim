@@ -36,7 +36,7 @@ function M.keymap_require(mode, keymap, module_name, accessor, ...)
             if (type(call) == "function") then -- call command
                 call()
             else
-                vim.cmd(call)
+                vim.cmd(call) -- call must be string command
             end
         end
     }
