@@ -6,6 +6,8 @@ use with [lazy.nvim](https://github.com/folke/lazy.nvim).
 [![Lua](https://img.shields.io/badge/Lua-%23f8f8f8?style=for-the-badge&logo=lua&logoColor=%2302027d)](https://www.lua.org)
 [![NeoVim](https://img.shields.io/badge/Neovim%200.7%2B-%234f9946?style=for-the-badge&logo=neovim&logoColor=white&labelColor=%230f191f)](https://neovim.io)
 
+[![Common Changelog](https://common-changelog.org/badge.svg)](https://common-changelog.org)
+
 Main repository lives on [GitLab](https://gitlab.com/xarvex/lazy-load.nvim).
 [GitHub](https://github.com/Xarvex/lazy-load.nvim) mostly serves as a mirror,
 so it can be read by plugin loaders.
