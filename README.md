@@ -32,6 +32,7 @@ Coming soon in order to configure towards different plugin managers.
 This example will be using [lazy.nvim](https://github.com/folke/lazy.nvim),
 if you would like to see another module loader you are welcome to contribute.
 
+Link to my personal configurations coming soon.
 
 #### Initialization
 
