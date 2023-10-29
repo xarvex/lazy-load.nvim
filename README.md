@@ -19,7 +19,7 @@ while retaining normal functionality.
 
 ## 🔧 Requirements
 
-- NeoVim >= **0.7.0** (to use vim.keymap)
+- [NeoVim](https://neovim.io) >= **0.7.0** (to use vim.keymap)
 
 
 ## ⚙️ Configuration
