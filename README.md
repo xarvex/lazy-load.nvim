@@ -43,7 +43,8 @@ In `init.lua` or wherever you load
 -- this assumes loading from a directory named plugin
 
 require("lazy").setup("plugin")
--- or require("lazy").setup({{ import = "plugin" }})
+-- or
+require("lazy").setup({{ import = "plugin" }})
 ```
 
 To:
