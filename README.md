@@ -15,7 +15,12 @@ while retaining normal functionality.
 - NeoVim >= **0.7.0** (to use vim.keymap)
 
 
-## ⚙️ Usage
+## ⚙️ Configuration
+
+Coming soon in order to configure towards different plugin managers.
+
+
+## 💡 Usage
 
 This example will be using [lazy.nvim](https://github.com/folke/lazy.nvim),
 if you would like to see another module loader you are welcome to contribute.
