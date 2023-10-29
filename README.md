@@ -18,6 +18,11 @@ so it can be read by plugin loaders.
 - ⌨️ Allows setting keymaps to lazily load the required module on press,
 while retaining normal functionality.
 
+Planned:
+
+- Syncing together [lazy.nvim](https://github.com/folke/lazy.nvim) `cmd` and
+`keys` options.
+- Support for other plugin managers.
 
 ## 🔧 Requirements
 
