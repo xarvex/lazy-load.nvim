@@ -56,7 +56,7 @@ local lazy_load = require("lazy-load")
 return {
     "ThePrimeagen/harpoon",
     lazy = true,
-    keys = {
+    keys = { -- tables returned are in the format { <keymap>, <command> } for use with lazy.nvim
         -- both of these ways can be used to call
         lazy_load.keymap_require("n", "<leader>a", "harpoon.mark", "add_file"),
         lazy_load.keymap_require("n", "<leader>h", "harpoon.ui", function(ui) ui.toggle_quick_menu() end),
