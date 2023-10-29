@@ -34,6 +34,10 @@ if you would like to see another module loader you are welcome to contribute.
 
 Link to my personal configurations coming soon.
 
+It is highly recommended to have a separate location where plugins are loaded
+apart from `init.lu`, as it will allow you to require this plugin at the
+top scope.
+
 #### Initialization
 
 In `init.lua` or wherever you load
@@ -61,12 +65,12 @@ require("lazy").setup({ "xarvex/lazy-load.nvim", { import = "plugin" } }) -- use
 #### Calling
 
 Well shown when using [harpoon](https://github.com/ThePrimeagen/harpoon),
-in `plugin/harpoon.lua`:
+where you are loading other plugins:
 
 ```lua
 local lazy_load = require("lazy-load")
-
-return {
+-- <...>
+{
     "ThePrimeagen/harpoon",
     lazy = true,
     
