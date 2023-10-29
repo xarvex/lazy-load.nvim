@@ -36,9 +36,8 @@ if you would like to see another module loader you are welcome to contribute.
 
 Link to my personal configurations coming soon.
 
-It is highly recommended to have a separate location where plugins are loaded
-apart from `init.lu`, as it will allow you to require this plugin at the
-top scope.
+It is highly recommended to have a separate location where plugins are loaded,
+as it will allow you to require this plugin at the top scope.
 
 #### Initialization
 
@@ -93,4 +92,4 @@ local lazy_load = require("lazy-load")
 
 ### 📃 License
 
-*This project is licensed under **Mozilla Public License 2.0**.*
+_This project is licensed under **Mozilla Public License 2.0**._
