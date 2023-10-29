@@ -1,13 +1,16 @@
 # ⏱ Lazy Load - NeoVim
 
 **lazy-load.nvim** is a lazy loader helper for NeoVim, particularly geared for
-[lazy.nvim](https://github.com/folke/lazy.nvim)
+[lazy.nvim](https://github.com/folke/lazy.nvim).
 
 [![Lua](https://img.shields.io/badge/Lua-%23f8f8f8?style=for-the-badge&logo=lua&logoColor=%2302027d)](https://www.lua.org)
 [![NeoVim](https://img.shields.io/badge/Neovim%200.7%2B-%234f9946?style=for-the-badge&logo=neovim&logoColor=white&labelColor=%230f191f)](https://neovim.io)
 
-Main repository lives on [GitLab](https://gitlab.com/xarvex/lazy-load.nvim),
-[GitHub](https://github.com/Xarvex/lazy-load.nvim) serves as a mirror.
+Main repository lives on [GitLab](https://gitlab.com/xarvex/lazy-load.nvim).
+
+[GitHub](https://github.com/Xarvex/lazy-load.nvim) serves as a mirror,
+mostly so it can be read by plugin loaders.
+
 
 ## 🔱 Features
 
@@ -29,6 +32,7 @@ Coming soon in order to configure towards different plugin managers.
 
 This example will be using [lazy.nvim](https://github.com/folke/lazy.nvim),
 if you would like to see another module loader you are welcome to contribute.
+
 
 #### Initialization
 
