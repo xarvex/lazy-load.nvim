@@ -7,8 +7,7 @@
 [![NeoVim](https://img.shields.io/badge/Neovim%200.7%2B-%234f9946?style=for-the-badge&logo=neovim&logoColor=white&labelColor=%230f191f)](https://neovim.io)
 
 Main repository lives on [GitLab](https://gitlab.com/xarvex/lazy-load.nvim).
-
-[GitHub](https://github.com/Xarvex/lazy-load.nvim) serves as a mirror,
+[GitHub](https://github.com/Xarvex/lazy-load.nvim) mostly serves as a mirror,
 mostly so it can be read by plugin loaders.
 
 
@@ -56,17 +55,18 @@ require("lazy").setup({ "xarvex/lazy-load.nvim", { import = "plugin" } })
 
 #### Calling
 
-Well shown when using [harpoon](https://github.com/ThePrimeagen/harpoon):
+Well shown when using [harpoon](https://github.com/ThePrimeagen/harpoon),
+in `plugin/harpoon.lua`:
 
 ```lua
--- in plugin/harpoon.lua
-
 local lazy_load = require("lazy-load")
 
 return {
     "ThePrimeagen/harpoon",
     lazy = true,
-    keys = { -- tables returned are in the format { <keymap>, <command> } for use with lazy.nvim
+    
+    -- tables returned are in the format { <keymap>, <command> } for use with lazy.nvim
+    keys = {
         -- both of these ways can be used to call
         lazy_load.keymap_require("n", "<leader>a", "harpoon.mark", "add_file"),
         lazy_load.keymap_require("n", "<leader>h", "harpoon.ui", function(ui) ui.toggle_quick_menu() end),
@@ -82,4 +82,4 @@ return {
 
 ### 📃 License
 
-This project is licensed under Mozilla Public License 2.0.
+*This project is licensed under **Mozilla Public License 2.0**.*
