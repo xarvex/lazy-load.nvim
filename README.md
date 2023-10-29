@@ -42,6 +42,7 @@ require("lazy").setup("plugin")
 To:
 
 ```lua
+-- must load before use in loading other plugins
 require("lazy").setup({ "xarvex/lazy-load.nvim", { import = "plugin" } })
 ```
 
