@@ -8,7 +8,7 @@
 
 Main repository lives on [GitLab](https://gitlab.com/xarvex/lazy-load.nvim).
 [GitHub](https://github.com/Xarvex/lazy-load.nvim) mostly serves as a mirror,
-mostly so it can be read by plugin loaders.
+so it can be read by plugin loaders.
 
 
 ## 🔱 Features
