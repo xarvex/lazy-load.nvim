@@ -64,9 +64,23 @@ To:
 ```lua
 -- must load before use in loading other plugins
 
-require("lazy").setup({ "https://gitlab.com/xarvex/lazy-load.nvim", { import = "plugin" } })
+require("lazy").setup({
+    {
+        "https://gitlab.com/xarvex/lazy-load.nvim",
+        lazy = true -- to only load when require called
+    },
+    -- or "https://gitlab.com/xarvex/lazy-load.nvim" to not lazily load
+    { import = "plugin" }
+})
 -- or
-require("lazy").setup({ "xarvex/lazy-load.nvim", { import = "plugin" } }) -- uses GitHub mirror
+require("lazy").setup({
+    {
+        "xarvex/lazy-load.nvim", -- uses GitHub mirror (kept up to date)
+        lazy = true
+    }
+    -- or "xarvex/lazy-load.nvim" to not lazily load
+    { import = "plugin" }
+})
 ```
 
 
