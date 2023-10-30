@@ -1,14 +1,14 @@
 local M = {}
 
----@param name1 string
----@param name2 string
+---@param name1 string|nil
+---@param name2 string|nil
 ---@return string combined
 local function combine_module_name(name1, name2)
     if name1 == nil then
-        name1 = ""
+        return name2 == nil and name2 or ""
     end
     if name2 == nil then
-        name2 = ""
+        return name1
     end
     return name1 .. (name1 ~= "" and name2 ~= "" and "." or "") .. name2
 end
@@ -36,12 +36,7 @@ end
 ---         or set_require.
 ---@return unknown module from require call
 function M:load(module_name)
-    if module_name ~= nil then
-        module_name = combine_module_name(self.module, module_name)
-    else
-        module_name = ""
-    end
-    return require(module_name)
+    return require(combine_module_name(self.module, module_name))
 end
 
 --- Sets up a keymap to lazily require a module command.
