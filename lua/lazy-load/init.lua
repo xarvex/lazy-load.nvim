@@ -62,12 +62,12 @@ end
 ---         module and varargs as parameters.
 ---@param ... any Arguments passed to the module function.
 ---@return table
-function M.keymap_require(mode, keymap, module_name, accessor, ...)
+function M:keymap_require(mode, keymap, module_name, accessor, ...)
     local args = ... -- args passed to command
     return { -- table that lazy.nvim expects
         keymap,
         function()
-            local module = M:load(module_name)
+            local module = self:load(module_name)
             local call
             if (type(accessor) == "string") then
                 local command = module[accessor]
