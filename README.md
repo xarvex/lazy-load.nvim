@@ -100,12 +100,15 @@ local lazy_load = require("lazy-load")
     keys = {
         -- both of these ways can be used to call
         lazy_load.keymap_require("n", "<leader>a", "harpoon.mark", "add_file"),
-        lazy_load.keymap_require("n", "<leader>h", "harpoon.ui", function(ui) ui.toggle_quick_menu() end),
+        lazy_load.keymap_require("n", "<leader>h", "harpoon.ui",
+        function(ui) ui.toggle_quick_menu() end),
 
         -- different ways to pass variables
         lazy_load.keymap_require("n", "<leader>1", "harpoon.ui", "nav_file", 1),
-        lazy_load.keymap_require("n", "<leader>2", "harpoon.ui", function(ui) ui.nav_file(2) end),
-        lazy_load.keymap_require("n", "<leader>3", "harpoon.ui", function(ui, num) ui.nav_file(num) end, 3),
+        lazy_load.keymap_require("n", "<leader>2", "harpoon.ui",
+        function(ui) ui.nav_file(2) end),
+        lazy_load.keymap_require("n", "<leader>3", "harpoon.ui",
+        function(ui, num) ui.nav_file(num) end, 3),
     }
 }
 ```
