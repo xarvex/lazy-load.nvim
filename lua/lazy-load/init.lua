@@ -38,8 +38,10 @@ end
 function M:load(module_name)
     if module_name ~= nil then
         module_name = combine_module_name(self.module, module_name)
+    else
+        module_name = ""
     end
-    return print(module_name)
+    return require(module_name)
 end
 
 --- Sets up a keymap to lazily require a module command.
