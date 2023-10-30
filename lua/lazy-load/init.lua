@@ -1,5 +1,47 @@
 local M = {}
 
+---@param name1 string
+---@param name2 string
+---@return string combined
+local function combine_module_name(name1, name2)
+    if name1 == nil then
+        name1 = ""
+    end
+    if name2 == nil then
+        name2 = ""
+    end
+    return name1 .. (name1 ~= "" and name2 ~= "" and "." or "") .. name2
+end
+
+---@param module_name string|nil Module name as it would appear in a require.
+---        A nil or empty string can be used to reset the value.
+---@return table self
+function M:set_require(module_name)
+    local module = {}
+    for k, v in pairs(self) do
+        module[k] = v
+    end
+    module.module = module_name
+    return module
+end
+
+---@param module_name string Module name as it would appear in a require.
+---@return table self
+function M:require(module_name)
+    return self:set_require(combine_module_name(self.module, module_name))
+end
+
+---@param module_name string|nil Module name as it would appear in a require.
+---         Can only be nil or empty if module is stored from previous require
+---         or set_require.
+---@return unknown module from require call
+function M:load(module_name)
+    if module_name ~= nil then
+        module_name = combine_module_name(self.module, module_name)
+    end
+    return print(module_name)
+end
+
 --- Sets up a keymap to lazily require a module command.
 --- 
 --- The keymap is mapped to a function that when executed, will require
@@ -10,17 +52,20 @@ local M = {}
 ---
 ---@param mode string|table What mode to be active in.
 ---@param keymap string Keyboard-combination.
----@param module_name string Module name (as it would appear in require call).
+---@param module_name string|nil Module name as it would appear in a require.
+---         Can only be nil or empty if module is stored from previous require
+---         or set_require.
 ---@param accessor string|function Command to execute.
 ---         If a string, key to the module element. If a function, passed with
 ---         module and varargs as parameters.
 ---@param ... any Arguments passed to the module function.
+---@return table
 function M.keymap_require(mode, keymap, module_name, accessor, ...)
     local args = ... -- args passed to command
     return { -- table that lazy.nvim expects
         keymap,
         function()
-            local module = require(module_name)
+            local module = M:load(module_name)
             local call
             if (type(accessor) == "string") then
                 local command = module[accessor]
