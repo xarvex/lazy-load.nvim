@@ -79,7 +79,7 @@ require("lazy").setup({
     {
         "xarvex/lazy-load.nvim", -- uses GitHub mirror (kept up to date)
         lazy = true
-    }
+    },
     -- or "xarvex/lazy-load.nvim" to not lazily load
     { import = "plugin" }
 })
