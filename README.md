@@ -38,13 +38,15 @@ Coming soon in order to configure towards different plugin managers.
 
 ## 💡 Usage
 
+It is highly recommended to have a separate location where plugins are loaded,
+as it will allow you to require this plugin at the top scope.
+
 This example will be using [lazy.nvim](https://github.com/folke/lazy.nvim),
 if you would like to see another module loader you are welcome to contribute.
 
-Link to my personal configurations coming soon.
+For a more practical example see my full
+[configuration](https://gitlab.com/dotfyls/neovim).
 
-It is highly recommended to have a separate location where plugins are loaded,
-as it will allow you to require this plugin at the top scope.
 
 #### Initialization
 
