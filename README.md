@@ -110,8 +110,10 @@ local lazy_load = require("lazy-load")
 You can even incrementally require a module in parts:
 
 ```lua
-local lazy_harpoon = require("lazy-load"):require("harpoon")
-local lazy_harpoon_ui = lazy_harpoon:require("ui")
+-- creates scope to use module lazily
+local lazy_harpoon = require("lazy-load"):require("harpoon") -- "harpoon"
+-- appends to lazily-required module
+local lazy_harpoon_ui = lazy_harpoon:require("ui") -- "harpoon.ui"
 -- <...>
 {
     "ThePrimeagen/harpoon",
