@@ -1,7 +1,7 @@
 # ⏱ Lazy Load - Neovim
 
-**lazy-load.nvim** is a lazy loader helper for Neovim, particularly geared for
-use with [lazy.nvim](https://github.com/folke/lazy.nvim).
+**lazy-load.nvim** is a lazy loader helper for [Neovim], particularly geared
+for use with [lazy.nvim].
 
 [![Neovim](https://img.shields.io/badge/Neovim%200.7%2B-%234f9946?style=for-the-badge&logo=neovim&logoColor=white&labelColor=%230f191f)](https://neovim.io)
 [![Lua](https://img.shields.io/badge/Lua-%23f8f8f8?style=for-the-badge&logo=lua&logoColor=%2302027d)](https://www.lua.org)
@@ -20,16 +20,15 @@ while retaining normal functionality.
 
 Planned:
 
-- Syncing together [lazy.nvim](https://github.com/folke/lazy.nvim) `cmd` and
+- Syncing together [lazy.nvim] `cmd` and
 `keys` options.
 - Support for other plugin managers.
 
 ## 🔧 Requirements
 
-- [Neovim](https://neovim.io) >= **0.7.0** (to use vim.keymap)
+- [Neovim] >= **0.7.0** (to use vim.keymap)
 
-[lazy.nvim](https://github.com/folke/lazy.nvim) is recommended for that true
-lazy loading experience.
+[lazy.nvim] is recommended for that true lazy loading experience.
 
 ## ⚙️ Configuration
 
@@ -41,8 +40,8 @@ Coming soon in order to configure towards different plugin managers.
 It is highly recommended to have a separate location where plugins are loaded,
 as it will allow you to require this plugin at the top scope.
 
-This example will be using [lazy.nvim](https://github.com/folke/lazy.nvim),
-if you would like to see another module loader you are welcome to contribute.
+This example will be using [lazy.nvim], if you would like to see another module
+loader you are welcome to contribute.
 
 For a more practical example see my full
 [configuration](https://gitlab.com/dotfyls/neovim).
@@ -50,8 +49,7 @@ For a more practical example see my full
 
 #### Initialization
 
-In `init.lua` or wherever you load
-[lazy.nvim](https://github.com/folke/lazy.nvim), change:
+In `init.lua` or wherever you load [lazy.nvim], change:
 
 ```lua
 -- this assumes loading from a directory named plugin
@@ -116,3 +114,6 @@ local lazy_load = require("lazy-load")
 ### 📃 License
 
 _This project is licensed under **Mozilla Public License 2.0**._
+
+[Neovim]: https://neovim.io
+[lazy.nvim]: https://github.com/folke/lazy.nvim
