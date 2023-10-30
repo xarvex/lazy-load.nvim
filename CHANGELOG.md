@@ -4,4 +4,4 @@
 
 _Initial release._
 
-[0.0.1]: https://gitlab.com/xarvex/lazy-load.nvim/-/tags/0.0.1
+[0.0.1]: https://gitlab.com/xarvex/lazy-load.nvim/tags/0.0.1
