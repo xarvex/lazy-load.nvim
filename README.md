@@ -93,19 +93,46 @@ local lazy_load = require("lazy-load")
     -- tables returned are in the format { <keymap>, <command> } for use with lazy.nvim
     keys = {
         -- both of these ways can be used to call
-        lazy_load.keymap_require("n", "<leader>a", "harpoon.mark", "add_file"),
-        lazy_load.keymap_require("n", "<leader>h", "harpoon.ui",
+        lazy_load:keymap_require("n", "<leader>a", "harpoon.mark", "add_file"),
+        lazy_load:keymap_require("n", "<leader>h", "harpoon.ui",
         function(ui) ui.toggle_quick_menu() end),
 
         -- different ways to pass variables
-        lazy_load.keymap_require("n", "<leader>1", "harpoon.ui", "nav_file", 1),
-        lazy_load.keymap_require("n", "<leader>2", "harpoon.ui",
+        lazy_load:keymap_require("n", "<leader>1", "harpoon.ui", "nav_file", 1),
+        lazy_load:keymap_require("n", "<leader>2", "harpoon.ui",
         function(ui) ui.nav_file(2) end),
-        lazy_load.keymap_require("n", "<leader>3", "harpoon.ui",
+        lazy_load:keymap_require("n", "<leader>3", "harpoon.ui",
         function(ui, num) ui.nav_file(num) end, 3),
     }
 }
 ```
+
+You can even incrementally require a module in parts:
+
+```lua
+local lazy_harpoon = require("lazy-load"):require("harpoon")
+local lazy_harpoon_ui = lazy_harpoon:require("ui")
+-- <...>
+{
+    "ThePrimeagen/harpoon",
+    lazy = true, 
+    keys = {
+        -- "harpoon.mark"
+        lazy_harpoon:keymap_require("n", "<leader>a", "mark", "add_file"),
+        -- "harpoon.ui"
+        lazy_harpoon:keymap_require("n", "<leader>h", "ui",
+        function(ui) ui.toggle_quick_menu() end),
+
+        -- no modification to module ("harpoon.ui")
+        lazy_harpoon_ui:keymap_require("n", "<leader>1", "", "nav_file", 1),
+        lazy_harpoon_ui:keymap_require("n", "<leader>2", nil,
+        function(ui) ui.nav_file(2) end),
+        lazy_harpoon_ui:keymap_require("n", "<leader>3", nil,
+        function(ui, num) ui.nav_file(num) end, 3),
+    }
+}
+```
+
 
 
 ### 📃 License
