@@ -5,7 +5,7 @@ local M = {}
 ---@return string combined
 local function combine_module_name(name1, name2)
     if name1 == nil then
-        return name2 == nil and name2 or ""
+        return name2 ~= nil and name2 or ""
     end
     if name2 == nil then
         return name1
