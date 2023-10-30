@@ -1,9 +1,9 @@
-# ⏱ Lazy Load - NeoVim
+# ⏱ Lazy Load - Neovim
 
-**lazy-load.nvim** is a lazy loader helper for NeoVim, particularly geared for
+**lazy-load.nvim** is a lazy loader helper for Neovim, particularly geared for
 use with [lazy.nvim](https://github.com/folke/lazy.nvim).
 
-[![NeoVim](https://img.shields.io/badge/Neovim%200.7%2B-%234f9946?style=for-the-badge&logo=neovim&logoColor=white&labelColor=%230f191f)](https://neovim.io)
+[![Neovim](https://img.shields.io/badge/Neovim%200.7%2B-%234f9946?style=for-the-badge&logo=neovim&logoColor=white&labelColor=%230f191f)](https://neovim.io)
 [![Lua](https://img.shields.io/badge/Lua-%23f8f8f8?style=for-the-badge&logo=lua&logoColor=%2302027d)](https://www.lua.org)
 
 [![Common Changelog](https://common-changelog.org/badge.svg)](https://common-changelog.org)
@@ -26,7 +26,7 @@ Planned:
 
 ## 🔧 Requirements
 
-- [NeoVim](https://neovim.io) >= **0.7.0** (to use vim.keymap)
+- [Neovim](https://neovim.io) >= **0.7.0** (to use vim.keymap)
 
 [lazy.nvim](https://github.com/folke/lazy.nvim) is recommended for that true
 lazy loading experience.
