@@ -15,6 +15,7 @@ can be read by plugin loaders.
 
 ## 🔱 Features
 
+- ⚡️ Incremental and deferred loading of modules and submodules.
 - ⌨️ Allows setting keymaps to lazily load the required module on press,
 while retaining normal functionality.
 
