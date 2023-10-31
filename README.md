@@ -46,7 +46,7 @@ loader you are welcome to contribute.
 
 For a more practical example see my full
 [configuration](https://gitlab.com/dotfyls/neovim) (Github
-[mirror](https://github.com/Xarvex/dotfyls-neovim).
+[mirror](https://github.com/Xarvex/dotfyls-neovim)).
 
 
 #### Initialization
@@ -139,7 +139,7 @@ local lazy_harpoon_ui = lazy_harpoon:require("ui") -- "harpoon.ui"
 ```
 
 Again, you may see my full [configuration](https://gitlab.com/dotfyls/neovim)
-(Github [mirror](https://github.com/Xarvex/dotfyls-neovim) to see how this can
+(Github [mirror](https://github.com/Xarvex/dotfyls-neovim)) to see how this can
 efficiently be leveraged.
 
 
