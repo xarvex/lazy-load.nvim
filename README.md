@@ -9,8 +9,8 @@ for use with [lazy.nvim].
 [![Common Changelog](https://common-changelog.org/badge.svg)](https://common-changelog.org)
 
 Main repository lives on [GitLab](https://gitlab.com/xarvex/lazy-load.nvim).
-[GitHub](https://github.com/Xarvex/lazy-load.nvim) mostly serves as a mirror,
-so it can be read by plugin loaders.
+[GitHub](https://github.com/Xarvex/lazy-load.nvim) serves as a mirror, so it
+can be read by plugin loaders.
 
 
 ## 🔱 Features
@@ -44,7 +44,8 @@ This example will be using [lazy.nvim], if you would like to see another module
 loader you are welcome to contribute.
 
 For a more practical example see my full
-[configuration](https://gitlab.com/dotfyls/neovim).
+[configuration](https://gitlab.com/dotfyls/neovim) (Github
+[mirror](https://github.com/Xarvex/dotfyls-neovim).
 
 
 #### Initialization
