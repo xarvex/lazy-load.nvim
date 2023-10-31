@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.0] - 2023-10-31
+## [0.1.0] ([GitHub](https://github.com/Xarvex/lazy-load.nvim/releases/tag/0.1.0)) - 2023-10-31
 
 _Spooky release._
 
@@ -13,7 +13,7 @@ _Spooky release._
 - Incremental and deffered requires through `set_require`, `require`, and `load` ([`8f686c94`](https://gitlab.com/xarvex/lazy-load.nvim/-/commit/8f686c94))
 
 
-## [0.0.1] - 2023-10-29
+## [0.0.1] ([GitHub](https://github.com/Xarvex/lazy-load.nvim/releases/tag/0.0.1)) - 2023-10-29
 
 _Initial release._
 
