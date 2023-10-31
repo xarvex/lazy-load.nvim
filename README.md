@@ -81,8 +81,8 @@ require("lazy").setup({
 
 #### Calling
 
-Well shown when using [harpoon](https://github.com/ThePrimeagen/harpoon),
-where you are loading other plugins:
+Where you are loading other plugins, Well shown when using
+[harpoon](https://github.com/ThePrimeagen/harpoon):
 
 ```lua
 local lazy_load = require("lazy-load")
@@ -108,12 +108,13 @@ local lazy_load = require("lazy-load")
 }
 ```
 
-You can even incrementally require a module in parts:
+You can even incrementally require a module in parts, useful when a plugin
+has several submodules to it:
 
 ```lua
--- creates scope to use module lazily
+-- creates scope to use module "harpoon" lazily
 local lazy_harpoon = require("lazy-load"):require("harpoon") -- "harpoon"
--- appends to lazily-required module
+-- appends to lazily-required "harpoon" module with "ui"
 local lazy_harpoon_ui = lazy_harpoon:require("ui") -- "harpoon.ui"
 -- <...>
 {
@@ -136,6 +137,9 @@ local lazy_harpoon_ui = lazy_harpoon:require("ui") -- "harpoon.ui"
 }
 ```
 
+Again, you may see my full [configuration](https://gitlab.com/dotfyls/neovim)
+(Github [mirror](https://github.com/Xarvex/dotfyls-neovim) to see how this can
+efficiently be leveraged.
 
 
 ### 📃 License
