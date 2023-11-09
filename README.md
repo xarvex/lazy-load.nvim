@@ -9,8 +9,8 @@ for use with [lazy.nvim].
 [![Common Changelog](https://common-changelog.org/badge.svg)](https://common-changelog.org)
 
 Main repository lives on [GitLab](https://gitlab.com/xarvex/lazy-load.nvim).
-[GitHub](https://github.com/Xarvex/lazy-load.nvim) serves as a mirror, so it
-can be read by plugin loaders.
+Mirror can be found through [GitHub](https://github.com/Xarvex/lazy-load.nvim),
+as well so it can be read by plugin loaders.
 
 
 ## 🔱 Features
