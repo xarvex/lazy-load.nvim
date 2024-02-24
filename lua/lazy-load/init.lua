@@ -40,7 +40,7 @@ function M:load(module_name)
 end
 
 --- Sets up a keymap to lazily require a module command.
---- 
+---
 --- The keymap is mapped to a function that when executed, will require
 --- the module, get the relevent command, and set the keymap for itself,
 --- then executing that command.
@@ -59,7 +59,7 @@ end
 ---@return table
 function M:keymap_require(mode, keymap, module_name, accessor, ...)
     local args = ... -- args passed to command
-    return { -- table that lazy.nvim expects
+    return {         -- table that lazy.nvim expects
         keymap,
         function()
             local module = self:load(module_name)
