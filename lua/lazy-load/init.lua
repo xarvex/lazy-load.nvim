@@ -35,6 +35,7 @@ end
 ---         Can only be nil or empty if module is stored from previous require
 ---         or set_require.
 ---@return unknown module from require call
+---@return unknown loaderdata from require call
 function M:load(module_name)
     return require(combine_module_name(self.module, module_name))
 end
