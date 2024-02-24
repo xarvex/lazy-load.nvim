@@ -37,12 +37,13 @@ end
 ---         Can only be nil or empty if module is stored from previous require
 ---         or set_require.
 ---@return unknown module from require call
+---@return unknown loaderdata from require call
 function M:load(module_name)
     return require(combine_module_name(self.module, module_name))
 end
 
 --- Sets up a keymap to lazily require a module command.
---- 
+---
 --- The keymap is mapped to a function that when executed, will require
 --- the module, get the relevent command, and set the keymap for itself,
 --- then executing that command.
@@ -61,7 +62,7 @@ end
 ---@return table
 function M:keymap_require(mode, keymap, module_name, accessor, ...)
     local args = ... -- args passed to command
-    return { -- table that lazy.nvim expects
+    return {         -- table that lazy.nvim expects
         keymap,
         function()
             local module = self:load(module_name)
