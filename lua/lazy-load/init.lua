@@ -1,3 +1,5 @@
+---@class Module
+---@field module? string
 local M = {}
 
 ---@param name1 string|nil
@@ -15,7 +17,7 @@ end
 
 ---@param module_name string|nil Module name as it would appear in a require.
 ---        A nil or empty string can be used to reset the value.
----@return table self
+---@return Module self
 function M:set_require(module_name)
     local module = {}
     for k, v in pairs(self) do
@@ -26,7 +28,7 @@ function M:set_require(module_name)
 end
 
 ---@param module_name string Module name as it would appear in a require.
----@return table self
+---@return Module self
 function M:require(module_name)
     return self:set_require(combine_module_name(self.module, module_name))
 end
@@ -56,7 +58,7 @@ end
 ---@param accessor string|function Command to execute.
 ---         If a string, key to the module element. If a function, passed with
 ---         module and varargs as parameters.
----@param ... any Arguments passed to the module function.
+---@param ... unknown Arguments passed to the module function.
 ---@return table
 function M:keymap_require(mode, keymap, module_name, accessor, ...)
     local args = ... -- args passed to command
